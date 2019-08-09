@@ -24,9 +24,9 @@ esac
 cd /tmp
 
 if [ $# -ge 1 ] ; then
-    curl https://github.com/elastos/Elastos.NET.Carrier.Native.SDK/releases/tag/internal-test | grep -E "/elastos.*android.*gz|/elastos.*linux.*gz" -o >carrier_libs.txt
+    curl https://github.com/elastos/Elastos.NET.Carrier.Native.SDK/releases/tag/v5.3.5/tmp-internal-test | grep -E "/elastos.*android.*gz|/elastos.*linux.*gz" -o >carrier_libs.txt
 else
-    curl https://github.com/elastos/Elastos.NET.Carrier.Native.SDK/releases/tag/internal-test | grep "/elastos.*android.*gz" -o >carrier_libs.txt
+    curl https://github.com/elastos/Elastos.NET.Carrier.Native.SDK/releases/tag/v5.3.5/tmp-internal-test | grep "/elastos.*android.*gz" -o >carrier_libs.txt
 fi
 
 sed -i $BAK_ARG 's/^/https:\/\/github.com/g' carrier_libs.txt
